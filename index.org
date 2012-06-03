@@ -2,4 +2,4 @@
 
 This is my homepage on github. Currently, not using this!
 
-[[xzpeter.org][Here]] is my blog. You may come and see over. 
+[[http://xzpeter.org][Here]] is my blog. You may come and see over. 
