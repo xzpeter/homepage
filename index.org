@@ -1,8 +1,6 @@
 #+TITLE: xzpeter's hub:)
 
-* Intro
-  
-** About this site
+*About this site*
 
 This is the github homepage for me. [[http://xzpeter.org][Here]] is my Chinese blog which you may come and see over. This site is a little bit different from the chinese blog: 
 
@@ -14,11 +12,11 @@ This is the github homepage for me. [[http://xzpeter.org][Here]] is my Chinese b
    
 Hope you enjoy. 
 
-** About me
+*About me*
 
 You may check [[http://xzpeter.org/?page_id%3D355%0A][here]] if you want to know who am I. 
 
-* Topics
+*Topics*
 
 Here is a list of the topics. 
 
