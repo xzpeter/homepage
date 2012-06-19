@@ -1,5 +1,25 @@
-#+TITLE: Homepage for xzpeter@github
+#+TITLE: xzpeter's hub:)
 
-This is my homepage on github. Currently, not using this!
+* Intro
+  
+** About this site
 
-[[http://xzpeter.org][Here]] is my blog. You may come and see over. 
+This is the github homepage for me. [[http://xzpeter.org][Here]] is my Chinese blog which you may come and see over. This site is a little bit different from the chinese blog: 
+
+1. It's hosted on github so that *it is totally free* :)
+2. It will be all written in *english* .
+3. The topic may be very small stuffs, like some /HOWTO/ tips on using Linux, or so on. So more like a NOTE page here. 
+4. Totally *plain text* here.
+5. I can commit my blog with the help of *git* . So it is fast. (that one, I use [[https://github.com/punchagan/org2blog][org2blog]], which is also fast :) )
+   
+Hope you enjoy. 
+
+** About me
+
+You may check [[http://xzpeter.org/?page_id%3D355%0A][here]] if you want to know who am I. 
+
+* Topics
+
+Here is a list of the topics. 
+
+[[file:linux-mint-13-howto.html][Linux Mint 13 HOWTOs]]

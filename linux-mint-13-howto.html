@@ -4,10 +4,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 lang="en" xml:lang="en">
 <head>
-<title>xzpeter's hub:)</title>
+<title>Linux Mint 13 HOWTOs</title>
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2012-06-19 12:07:09 CST"/>
+<meta name="generated" content="2012-06-19 12:02:54 CST"/>
 <meta name="author" content="xzpeter"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -85,91 +85,81 @@ lang="en" xml:lang="en">
 </div>
 
 <div id="content">
-<h1 class="title">xzpeter's hub:)</h1>
+<h1 class="title">Linux Mint 13 HOWTOs</h1>
 
+<p>I am writting this since I started to use Linux Mint 13 from <i>May 2012</i> . I will note all the small stuffs down here. If you met the same problem, I hope this may help. 
+</p>
 
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1 Intro </a>
-<ul>
-<li><a href="#sec-1-1">1.1 About this site </a></li>
-<li><a href="#sec-1-2">1.2 About me </a></li>
-</ul>
-</li>
-<li><a href="#sec-2">2 Topics </a></li>
+<li><a href="#sec-1">1 HOWTO set the default LCD backlight brightness </a></li>
+<li><a href="#sec-2">2 HOWTO set the default internet browser </a></li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> Intro </h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> HOWTO set the default LCD backlight brightness </h2>
 <div class="outline-text-2" id="text-1">
 
 
+<p>
+I met this problem both under Ubuntu 10.10 and Mint 13. Currently, the solution is simple. For my condition, add this to the end of <b>/etc/rc.local</b> file: 
+</p>
 
-</div>
 
-<div id="outline-container-1-1" class="outline-3">
-<h3 id="sec-1-1"><span class="section-number-3">1.1</span> About this site </h3>
-<div class="outline-text-3" id="text-1-1">
+
+<pre class="example">echo $N &gt; /sys/class/backlight/acpi_video0/brightness
+exit 0
+</pre>
+
+
 
 
 <p>
-This is the github homepage for me. <a href="http://xzpeter.org">Here</a> is my Chinese blog which you may come and see over. This site is a little bit different from the chinese blog: 
+the <b>$N</b> is one number from <b>0</b> to your max brightness. You can obtain the max value by the shell command: 
 </p>
-<ol>
-<li>It's hosted on github so that <b>it is totally free</b> :)
-</li>
-<li>It will be all written in <b>english</b> .
-</li>
-<li>The topic may be very small stuffs, like some <i>HOWTO</i> tips on using Linux, or so on. So more like a NOTE page here. 
-</li>
-<li>Totally <b>plain text</b> here.
-</li>
-<li>I can commit my blog with the help of <b>git</b> . So it is fast. (that one, I use <a href="https://github.com/punchagan/org2blog">org2blog</a>, which is also fast :) )
-</li>
-</ol>
 
 
-<p>   
-Hope you enjoy. 
-</p>
-</div>
 
-</div>
+<pre class="example">cat /sys/class/backlight/acpi_video0/max_brightness
+</pre>
 
-<div id="outline-container-1-2" class="outline-3">
-<h3 id="sec-1-2"><span class="section-number-3">1.2</span> About me </h3>
-<div class="outline-text-3" id="text-1-2">
+
 
 
 <p>
-You may check <a href="http://xzpeter.org/?page_id=355
-">here</a> if you want to know who am I. 
+For me, it is <b>7</b>. 
 </p>
-</div>
 </div>
 
 </div>
 
 <div id="outline-container-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> Topics </h2>
+<h2 id="sec-2"><span class="section-number-2">2</span> HOWTO set the default internet browser </h2>
 <div class="outline-text-2" id="text-2">
 
 
 <p>
-Here is a list of the topics. 
+This setting may work under all <b>Debian</b> systems. Here I found that changing the default browser in the Mint using GUI don't really work. I am not sure why. But I can achieve my goal (setting default browser from <i>firefox</i> to <i>chrome</i>) by: 
 </p>
-<p>
-<a href="linux-mint-13-howto.html">Linux Mint 13 HOWTOs</a>
-</p></div>
+
+
+
+<pre class="example">update-alternatives --set x-www-browser /usr/bin/chromium-browser
+</pre>
+
+
+
+
+</div>
 </div>
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2012-06-19 12:07:09 CST</p>
+<p class="date">Date: 2012-06-19 12:02:54 CST</p>
 <p class="author">Author: xzpeter</p>
 <p class="creator">Org version 7.7 with Emacs version 23</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>

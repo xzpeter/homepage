@@ -1,0 +1,29 @@
+#+TITLE: Linux Mint 13 HOWTOs
+
+I am writting this since I started to use Linux Mint 13 from /May 2012/ . I will note all the small stuffs down here. If you met the same problem, I hope this may help. 
+
+* HOWTO set the default LCD backlight brightness
+
+I met this problem both under Ubuntu 10.10 and Mint 13. Currently, the solution is simple. For my condition, add this to the end of */etc/rc.local* file: 
+
+#+BEGIN_SRC shell
+echo $N > /sys/class/backlight/acpi_video0/brightness
+exit 0
+#+END_SRC
+
+the *$N* is one number from *0* to your max brightness. You can obtain the max value by the shell command: 
+
+#+BEGIN_SRC shell
+cat /sys/class/backlight/acpi_video0/max_brightness
+#+END_SRC
+
+For me, it is *7*. 
+
+* HOWTO set the default internet browser
+
+This setting may work under all *Debian* systems. Here I found that changing the default browser in the Mint using GUI don't really work. I am not sure why. But I can achieve my goal (setting default browser from /firefox/ to /chrome/) by: 
+
+#+BEGIN_SRC shell
+update-alternatives --set x-www-browser /usr/bin/chromium-browser
+#+END_SRC
+
