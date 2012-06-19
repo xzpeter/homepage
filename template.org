@@ -1,0 +1,6 @@
+#+TITLE:     Title
+#+AUTHOR:    xzpeter
+#+EMAIL:     xzpeter@gmail.com
+#+OPTIONS:   num:t toc:t 
+#+LINK_UP:   index.html
+#+LINK_HOME: index.html
